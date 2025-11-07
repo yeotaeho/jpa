@@ -1,5 +1,6 @@
 package kr.yeotaeho.api.soccer.player.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,7 +26,7 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String playerId;
+    private String playerUk;
     private String playerName;
     private String ePlayerName;
     private String nickname;
@@ -41,7 +42,7 @@ public class Player {
 
 
     @ManyToOne
-    @JoinColumn(name = "teamId")
+    @JoinColumn(name = "teamUk" ,columnDefinition = "VARCHAR(255)")
      Team team;
 
 }

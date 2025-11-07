@@ -27,9 +27,9 @@ public class Team {
 
     @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long indexId;
+    private Long id;
 
-    private String teamId;
+    private String teamUk;
     private String regionName;
     private String teamName;
     private String eTeamName;
@@ -48,7 +48,7 @@ public class Team {
     private List<Player> players;
 
     @ManyToOne
-    @JoinColumn(name = "stadium_id")
+    @JoinColumn(name = "stadiumUk")
     private Stadium stadium;
 
 }

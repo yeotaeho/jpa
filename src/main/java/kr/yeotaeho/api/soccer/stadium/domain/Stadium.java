@@ -27,11 +27,11 @@ public class Stadium {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private Long indexId;
+     private Long id;
 
-    private String stadiumId;
+    private String stadiumUk;
     private String stadiumName;
-    private String hometeamId;
+    private String hometeamUk;
     private Integer seatCount;
     private String address;
     private String ddd;

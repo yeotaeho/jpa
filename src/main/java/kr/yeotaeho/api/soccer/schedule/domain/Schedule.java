@@ -29,13 +29,13 @@ public class Schedule {
     
     private String scheDate;        
     private String gubun;         
-    private String hometeamId;   
-    private String awayteamId;   
+    private String hometeamUk;   
+    private String awayteamUk;   
     private Integer homeScore;    
     private Integer awayScore;     
     
     @ManyToOne
-    @JoinColumn(name = "stadiumId")
+    @JoinColumn(name = "stadiumUk" ,columnDefinition = "VARCHAR(255)")
     private Stadium stadium;
 
 
